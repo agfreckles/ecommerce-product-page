@@ -1,0 +1,13 @@
+@import './variables';
+
+
+*{
+    font-family: $font-stack;
+    font-size: $font-size-paragraph;
+    font-size: 11px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}

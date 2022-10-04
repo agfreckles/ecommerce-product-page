@@ -1,0 +1,57 @@
+@import "./variables";
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  background-color: #fff;
+  padding: 0.5em 0;
+  border-bottom: 1px solid $grayish-blue;
+  font-family: $font-stack;
+  font-weight: $weights400;
+  color: $dark-grayish-blue;
+  .item a {
+    font-size: 30px;
+  }
+
+  .sneaker {
+    font-weight: $weights700;
+    padding: 0.3em 0.5em 1em 0;
+    color: $black-with-75-opacity-for-lightbox-background;
+    font-size: 4.1rem;
+  }
+  .user_profile_container {
+    margin: 0em 1em;
+    padding: 0;
+    border-radius: 50px;
+    width: 3em;
+    height: 3em;
+
+  }
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  text-align: center;
+  padding: 12px 10px;
+  text-decoration: none;
+  line-height: 25px;
+  font-size: 1.5rem;
+}
+
+.right {
+  float: right;
+}
+/* 
+Add media queries for responsiveness - when the screen is 
+500px wide or less, stack the links on top of each other
+ */
+@media screen and (max-width: 500px) {
+  .hide{
+    float: none;
+    display: none;
+    text-align: left;
+  }
+  // .right {
+  //   float: none;
+  // }
+}

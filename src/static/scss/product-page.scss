@@ -1,0 +1,140 @@
+@import "./variables";
+.main {
+  // border: 1px solid blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  // letter-spacing: 0.2em;
+}
+.orange {
+  color: $orange;
+}
+.space {
+  margin: 0 2em;
+}
+.prodImg {
+  //   border: 1px dashed red;
+  display: flex;
+  flex-direction: column;
+  .main-img-holder {
+    width: 32vw;
+    margin: 6vh;
+    img {
+      border-radius: 2em;
+    }
+  }
+  .thumbnails-holder {
+    display: flex;
+    flex-direction: row;
+    width: 32vw;
+    justify-content: space-between;
+    .thumbnails {
+      //   border: 1px solid rgb(0, 255, 68);
+      width: 11em;
+      height: 11em;
+      margin: 0.2em;
+      img {
+        border-radius: 1em;
+      }
+    }
+  }
+}
+.prodInfo {
+  //   border: 1px dashed orange;
+  width: 42%;
+  display: flex;
+  flex-direction: column;
+  padding: 15em 25em 2em 8em;
+  .sneaker-company {
+    //   border: 1px dashed rgb(91, 81, 105);
+    letter-spacing: 0.2em;
+
+    font-size: $font-size-paragraph;
+    font-weight: $weights700;
+    color: $orange;
+    margin: 0em 0em 2em 0;
+  }
+  .fall {
+    color: $very-vark-blue;
+    font-size: 5rem;
+    font-weight: $weights700;
+    margin: 0em 0em 1em 0;
+  }
+  .paragraph {
+    font-size: 1.8rem;
+    font-weight: 0.9em;
+    color: $grayish-blue;
+    margin: 0em 0em 1em 0;
+  }
+  .price {
+    color: $black-with-75-opacity-for-lightbox-background;
+    font-weight: $weights700;
+    font-size: 3rem;
+    // margin-bottom: 1em;
+    span {
+      background-color: $pale-orange;
+      color: $orange;
+      padding: 0.1em 0.3em;
+      border-radius: 5px;
+      font-size: 2rem;
+      margin: 3em;
+    }
+  }
+  .reduction {
+    font-size: 1.7em;
+    font-weight: $weights700;
+    color: $grayish-blue;
+    margin-top: 0.4em;
+    text-decoration: line-through;
+  }
+  .add-to-cart {
+    button {
+      background-color: grey;
+      height: 5em;
+      margin: 2em 3em 0 0;
+      border-radius: 7px;
+      border: none;
+      span {
+        font-size: 2rem;
+        font-weight: $weights700;
+      }
+    }
+    .plus-minus {
+      background-color: $light-grayish-blue;
+    }
+    .plus,
+    .minus {
+      margin: 0.4em 1.2em;
+      color: $orange;
+    }
+    .add {
+      background-color: $orange;
+      color: $white;
+      font-size: 01rem;
+      span {
+        margin: 2em;
+        svg {
+          margin: 0 2em;
+        }
+      }
+    }
+  }
+}
+.prodImg {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .prodImg,
+  .prodInfo,
+  .thumbnails-holder {
+    width: 100%;
+    margin: 0;
+  }
+}
