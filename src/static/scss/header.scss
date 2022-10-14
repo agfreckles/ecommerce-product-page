@@ -16,7 +16,8 @@
     font-weight: $weights700;
     padding: 0.3em 0.5em 1em 0;
     color: $black-with-75-opacity-for-lightbox-background;
-    font-size: 4.1rem;
+    font-size: 4.4rem;
+    line-height: 20px;
   }
   .user_profile_container {
     margin: 0em 1em;
@@ -26,8 +27,25 @@
     height: 3em;
 
   }
-}
 
+
+}
+#notifier .fa-stack[data-count]:after {
+  position: absolute;
+  right: -35%;
+  top: -15%;
+  content: attr(data-count);
+  font-size: 24%;
+  padding: .6em;
+  border-radius: 50%;
+  line-height: .8em;
+  color: white;
+  background: rgba(255, 0, 0, 0.85);
+  text-align: center;
+  min-width: 1em;
+  font-weight: bold;
+  margin-bottom: -20em;
+}
 /* Style the header links */
 .header a {
   float: left;
@@ -36,11 +54,20 @@
   text-decoration: none;
   line-height: 25px;
   font-size: 1.5rem;
+  // border: 1px solid red;
+}
+#badge-holder{
+  // border: 1px solid rgb(0, 255, 72);
+  height: 5vh;
 }
 
 .right {
   float: right;
+  a {
+    margin: 0 3em;
+  }
 }
+
 /* 
 Add media queries for responsiveness - when the screen is 
 500px wide or less, stack the links on top of each other
@@ -51,7 +78,4 @@ Add media queries for responsiveness - when the screen is
     display: none;
     text-align: left;
   }
-  // .right {
-  //   float: none;
-  // }
 }
