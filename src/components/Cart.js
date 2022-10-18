@@ -24,7 +24,10 @@ const Cart = (props) => {
             {`${item.name}`} {item.price} x {amountOfItems(item.id)}{" "}
             <span id="total">${cartTotal}.00</span>
           </span>
-          <svg
+          <div className="delete" onClick={() => props.setCart([])}>
+            <span className="material-symbols-outlined">delete</span>
+          </div>
+          {/* <svg
             width="14"
             height="16"
             xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +41,7 @@ const Cart = (props) => {
               />
             </defs>
             <use fill="#C3CAD9" fillRule="nonzero" xlinkHref="#a" />
-          </svg>
+          </svg> */}
         </div>
       ))
     ) : (

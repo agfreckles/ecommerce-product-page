@@ -1,9 +1,11 @@
 @import "normalize.css";
-.container {
-    // border: 2px solid red;
-    // width: 99.9vw;
-    // max-width: 1440px;
- 
+.container { 
     padding: 3em 17em;
 }
 
+@media screen  and (max-width: 1000px){
+    .container{
+        padding: 0;
+    }
+    
+}

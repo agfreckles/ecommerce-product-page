@@ -52,10 +52,19 @@
         width: 3vw;
         border-radius: 0.5em;
       }
+      .delete {
+        span {
+          font-size: 2rem;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
+
 .checkout {
+  position: absolute;
+  bottom: 10%;
   margin: 0 3em;
   border: none;
   border-radius: 0.4em;
@@ -67,6 +76,6 @@
   font-size: 1.3rem;
 }
 #total {
-    font-weight: $weights700;
-    color: $black-with-75-opacity-for-lightbox-background;
+  font-weight: $weights700;
+  color: $black-with-75-opacity-for-lightbox-background;
 }

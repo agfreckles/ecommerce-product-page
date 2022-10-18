@@ -1,79 +1,122 @@
 @import "./variables";
 /* Style the header with a grey background and some padding */
 .header {
-  overflow: hidden;
+  overflow: visible;
+
+  // display: flex;
+  // justify-content: space-between;
   background-color: #fff;
-  padding: 0.5em 0;
   border-bottom: 1px solid $grayish-blue;
   font-family: $font-stack;
   font-weight: $weights400;
   color: $dark-grayish-blue;
-  .item a {
-    font-size: 30px;
-  }
-
+  display: flex;
   .sneaker {
     font-weight: $weights700;
-    padding: 0.3em 0.5em 1em 0;
     color: $black-with-75-opacity-for-lightbox-background;
-    font-size: 4.4rem;
-    line-height: 20px;
+    font-size: 7em;
+    margin: 0.5em 1.5em 0.5em 0;
   }
   .user_profile_container {
-    margin: 0em 1em;
+    // margin: 0em 1em;
     padding: 0;
-    border-radius: 50px;
+    border-radius: 50%;
     width: 3em;
     height: 3em;
-
+    :hover {
+      border: 1px solid rgb(255, 132, 0);
+      border-radius: 50%;
+    }
   }
-
-
+  // a {
+  //   margin: 2.8rem 3rem;
+  // }
+}
+.hide:hover {
+  border-bottom: 8px solid $orange;
+  height: 8.9ch;
+  margin-bottom: -0.25em;
+  z-index: 10;
+  // cursor: pointer;
 }
 #notifier .fa-stack[data-count]:after {
-  position: absolute;
-  right: -35%;
-  top: -15%;
+  position: relative;
+  top: -8.5em;
+  right: 2em;
   content: attr(data-count);
-  font-size: 24%;
-  padding: .6em;
+  font-size: 15%;
+  padding: 0.3em;
   border-radius: 50%;
-  line-height: .8em;
+
   color: white;
-  background: rgba(255, 0, 0, 0.85);
+  background: $orange;
   text-align: center;
-  min-width: 1em;
+
   font-weight: bold;
-  margin-bottom: -20em;
+  // margin-bottom: -20em;
 }
+#notifier.fa-stack[data-count] {
+  width: 28em;
+}
+// #notifier .fa-5x {
+//   height: 1em;
+// }
+#notifier svg {
+  // height: 100px;
+  // border: 1px solid rgb(255, 0, 30);
+  min-width: 100px;
+  margin: 0;
+  fill-rule {
+    color: red;
+  }
+}
+.right {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  margin: 0;
+  height: 14.1em;
+  // border: 1px solid rgb(255, 0, 30);
+}
+.margin {
+  margin: auto 1.5em;
+}
+// .shopping-cart-icon {
+//   span {
+//     font-size: 4em;
+//     font-weight: 900;
+//   }
+// }
 /* Style the header links */
 .header a {
   float: left;
   text-align: center;
-  padding: 12px 10px;
+  margin: 1.5em 0 0.5em 1.8em;
+  // padding: 12px 10px;
   text-decoration: none;
-  line-height: 25px;
-  font-size: 1.5rem;
-  // border: 1px solid red;
+  line-height: 0.1em;
+  font-size: 2.2em;
+  cursor: pointer;
 }
-#badge-holder{
-  // border: 1px solid rgb(0, 255, 72);
-  height: 5vh;
+#badge-holder {
+  border: 1px solid rgb(0, 255, 72);
+  padding: 0%;
+  // height: 5vh;
 }
 
-.right {
-  float: right;
-  a {
-    margin: 0 3em;
-  }
+.cart-notify {
+  width: 4.5vw;
+  height: 5vh;
+  display: flex;
+  padding: 0 !important;
 }
 
 /* 
 Add media queries for responsiveness - when the screen is 
 500px wide or less, stack the links on top of each other
  */
-@media screen and (max-width: 500px) {
-  .hide{
+@media screen and (max-width: 1000px) {
+  .hide {
     float: none;
     display: none;
     text-align: left;

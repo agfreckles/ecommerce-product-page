@@ -6,6 +6,11 @@
   justify-content: space-evenly;
   // letter-spacing: 0.2em;
 }
+.active {
+  opacity: 0.7;
+  border: 2px solid $orange;
+  border-radius: 2em;
+}
 .orange {
   color: $orange;
 }
@@ -30,11 +35,17 @@
     justify-content: space-between;
     .thumbnails {
       //   border: 1px solid rgb(0, 255, 68);
-      width: 11em;
-      height: 11em;
+      width: 15em;
+      height: 15em;
       margin: 0.2em;
       img {
-        border-radius: 1em;
+        border-radius: 2em;
+      }
+
+      :hover,
+      :active {
+        opacity: 0.7;
+        border: 2px solid $orange;
       }
     }
   }
@@ -48,7 +59,6 @@
   .sneaker-company {
     //   border: 1px dashed rgb(91, 81, 105);
     letter-spacing: 0.2em;
-
     font-size: $font-size-paragraph;
     font-weight: $weights700;
     color: $orange;
@@ -56,7 +66,7 @@
   }
   .fall {
     color: $very-vark-blue;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: $weights700;
     margin: 0em 0em 1em 0;
   }

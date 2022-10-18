@@ -1,0 +1,40 @@
+@import "./variables";
+.arrow {
+  height: 2cm;
+  width: 2cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 49%;
+  background: #fff;
+  cursor: pointer;
+  z-index: 2;
+  span {
+    font-size: 4rem;
+    font-weight: $weights700;
+  }
+  :hover {
+    color: $orange;
+  }
+}
+#arrow-left {
+  position: absolute;
+  top: 40%;
+  left: 28.6%;
+}
+#arrow-forward {
+  position: absolute;
+  top: 40%;
+  right: 28.6%;
+}
+#close {
+  position: absolute;
+  top: 10%;
+  right: 29%;
+  background: none;
+  color: #fff;
+  span {
+    font-size: 3.1rem;
+    font-weight: $weights700;
+  }
+}

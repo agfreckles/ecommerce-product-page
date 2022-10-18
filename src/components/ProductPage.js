@@ -1,15 +1,32 @@
 import React from "react";
+import "react-slideshow-image/dist/styles.css";
 import "../static/scss/product-page.scss";
 import { products } from "../data/product";
+// import { productImages } from "../data/imgs/productImages";
+import { productImages } from "../data/imgs/productImagesGroup";
 
 const ProductPage = (props) => {
-  // const [cart, setCart] = React.useState([]);
+  const OpenImage = () => {
+    props.toggleClose("block");
+  };
   const addToCart = (product) =>
     props.setCart((currentCart) => [...currentCart, product]);
 
   const removeFromCart = (id) => {
     props.setCart(props.cart.filter((currentCart) => currentCart.id !== id));
   };
+
+  const renderThumbnails = () =>
+    productImages.map((img) => (
+      <div
+        className={`thumbnails ${!props.close === "none" ? "active" : ""}`}
+        onClick={() => OpenImage()}
+        key={img.id}
+      >
+        <img src={img} alt="Alt" />
+      </div>
+    ));
+
   const listItemDetail = () =>
     products.map((product) => (
       <div className="prodInfo" key={product.id}>
@@ -83,36 +100,7 @@ const ProductPage = (props) => {
         <div className="main-img-holder">
           <img src={window.location.origin + `/imgs/image-product-1.jpg`} />
         </div>
-        <div className="thumbnails-holder">
-          <div className="thumbnails">
-            <img
-              src={
-                window.location.origin + `/imgs/image-product-1-thumbnail.jpg`
-              }
-            />
-          </div>
-          <div className="thumbnails">
-            <img
-              src={
-                window.location.origin + `/imgs/image-product-2-thumbnail.jpg`
-              }
-            />
-          </div>
-          <div className="thumbnails">
-            <img
-              src={
-                window.location.origin + `/imgs/image-product-3-thumbnail.jpg`
-              }
-            />
-          </div>
-          <div className="thumbnails">
-            <img
-              src={
-                window.location.origin + `/imgs/image-product-4-thumbnail.jpg`
-              }
-            />
-          </div>
-        </div>
+        <div className="thumbnails-holder">{renderThumbnails()}</div>
       </div>
       {listItemDetail()}
     </div>
